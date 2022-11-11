@@ -1,0 +1,21 @@
+{
+    "name":"dsCustomers",
+    "v_table":"Customer",
+    "crud_table":"Customer",
+    "table_schema":"SalesLT",
+    "allow_insert": true,
+    "allow_update": true,
+    "pagination": {
+        "per_page": 50,
+        "page": 1
+    },
+    "primkey":"CustomerID",
+    "columns":[
+        {"name": "CustomerID" , "type": "number"},
+        {"name": "NameStyle" , "type": "string"},
+        {"name": "Title" , "type": "string"},
+        {"name": "FirstName" , "type": "string"},
+        {"name": "LastName" , "type": "string"},
+        {"name": "CompanyName" , "type": "string"}
+    ]
+}

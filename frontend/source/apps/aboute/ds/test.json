@@ -1,0 +1,18 @@
+{
+    "name":"personsDs",
+    "out_table":"HumanResources.vEmployee",
+    "in_table": null,
+    "allow_insert": false,
+    "allow_update": false,
+    "allow_destroy": false,
+    "pagination": true,
+    "per_page": 50,
+    "pk":"BusinessEntityId",
+    "fields": [
+        {"name":"BusinessEntityId", "type":"number"},
+        {"name":"FirstName", "type":"string"},
+        {"name":"LasttName", "type":"string"},
+        {"name":"PhoneNumber", "type":"number"}
+    ],
+    "master": null
+}

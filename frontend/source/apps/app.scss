@@ -1,0 +1,24 @@
+html, body {
+    height: 100vh;
+}
+/* styles for flex view */
+.a-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    .a-container__header{
+        height: 60px;
+    }
+    .a-container__body{
+        flex-grow: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .a-container__footer{
+        height: 60px;
+    }
+}
+.full-h{
+    height: 100%;
+}

@@ -1,0 +1,8 @@
+{
+    "main_app":"main",
+    "views_dir":"/frontend/source",
+    "statics": {
+        "static": "public",
+        "manifests":"public/manifests"
+    }
+}
