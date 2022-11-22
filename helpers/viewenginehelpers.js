@@ -4,12 +4,24 @@ const fs = require('fs');
 
 function getAppCss( p_app_name )
 {
-    return `<link rel="stylesheet" href="static/apps/${p_app_name}/index.css">`;
+    let r = ``;
+    let f = `./frontend/public/apps/${ p_app_name }/index.css`;
+
+    if( fs.existsSync( f ) ){
+        r = `<link rel="stylesheet" href="static/apps/${p_app_name}/index.css">`;
+    }
+    return r;
 }
 
 function getAppJs( p_app_name )
 {
-    return `<script type="text/javascript" src="static/apps/${p_app_name}/index.js" ></script>`;
+    let r = ``;
+    let f = `./frontend/public/apps/${ p_app_name }/index.js`;
+
+    if( fs.existsSync( f ) ){
+        r = `<script type="text/javascript" src="static/apps/${p_app_name}/index.js" ></script>`;
+    }
+    return r;
 }
 
 function initAppDs( p_app_name )
