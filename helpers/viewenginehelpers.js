@@ -15,16 +15,20 @@ function getAppJs( p_app_name )
 function initAppDs( p_app_name )
 {
     let r = '';
-    let files = fs.readdirSync( `./frontend/source/apps/${ p_app_name }/ds` );
-    if( files ) {
-        r += '<script>';
-        files.forEach((_f)=>{
-            let config = require(`../frontend/source/apps/${ p_app_name }/ds/${ _f }`);
-            r += `window.container.createDS(${ JSON.stringify(config) });`;
-        });
+    let dir = `./frontend/source/apps/${ p_app_name }/ds`;
+    if( fs.existsSync( dir ) ) {
+        let files = fs.readdirSync( dir );
+        if( files ) {
+            r += '<script>';
+            files.forEach((_f)=>{
+                let config = require(`../frontend/source/apps/${ p_app_name }/ds/${ _f }`);
+                r += `window.container.createDS(${ JSON.stringify(config) });`;
+            });
 
-        r += '</script>';
+            r += '</script>';
+        }
     }
+    
 
     return r;
 }
