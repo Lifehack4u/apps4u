@@ -27,9 +27,8 @@ router.get('/test', ( p_req, p_res)=>{
 
 router.get('/clearcache', ( p_req, p_res)=>{
     Object.keys( require.cache ).forEach(( _el )=>{
-        console.log(" el 1 ---- : ", _el );
-        if( /(.*)\/apicojs\/routes\/(.*)js/.test(_el) ) {
-            console.log(" el : ", _el );
+        if( /(.*)\\apps4u\\routes\\(.*)js/.test(_el) ) {
+            console.log(" el : ", require.cache[ _el ] );
         }
     })
     p_res.json({"route":"test"});

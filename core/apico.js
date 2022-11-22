@@ -110,9 +110,7 @@ function registerRoutes()
    * Wildcard route
    */
   app.all('*', function( p_req, p_res ){
-    p_res.status(404)
-    p_res.json({ "message": `The route ${p_req.path} does not exists!`  });
-    //view( p_res, 'notfound', 'Not found 404' );
+    view( p_res, 'notfound', 'Not found 404' );
   })
 }
 
