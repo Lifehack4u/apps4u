@@ -3,6 +3,12 @@ const { view } = require('../core/view');
 
 const router = require('express').Router();
 
+
+router.get('/', ( p_req, p_res)=>{
+    p_res.json({"route":"auth"});
+});
+
+
 router.get('/login', ( p_req, p_res)=>{
     p_res.json({"route":"login"});
 });

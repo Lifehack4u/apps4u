@@ -79,22 +79,6 @@ function registerMiddlewares()
 function registerRoutes()
 {
   let d = path.dirname( __dirname );
-
-  // let p = path.join( d, "controllers" );
-
-  // const files = fs.readdirSync( p )
-  // if( files ) {
-  //     files.forEach( _f=>{
-  //         console.log("_f : ", _f );
-  //         if( !/baseController/.test( _f )) {
-  //             const cntr = new require( `${p}/${ _f.split('.')[0] }` );
-  //             let _cntr = new cntr();
-
-  //             _cntr.generateRoutes();
-  //         }
-  //     });
-  // }
-
   
   let routes = path.join( d, "routes" );
 
@@ -109,9 +93,15 @@ function registerRoutes()
   /**
    * Wildcard route
    */
-  app.all('*', function( p_req, p_res ){
+  app.get('*', function( p_req, p_res ){
+    p_res.status(404);
     view( p_res, 'notfound', 'Not found 404' );
-  })
+  });
+
+  app.post('*', function( p_req, p_res ){
+    p_res.status(404);
+    p_res.json({"message":"Route does not exist!"});
+  });
 }
 
 module.exports = {

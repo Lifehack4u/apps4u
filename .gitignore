@@ -1,3 +1,4 @@
 node_modules
 sqlite
 ignore
+package-lock.json

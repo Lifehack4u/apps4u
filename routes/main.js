@@ -10,8 +10,6 @@ function setCounterToZero()
     counter = 0;
 }
 router.use((req, res, next) => {
-    console.log('Time: ', Date.now());
-    console.log(' route : ', req.url );
     next()
 })
 
@@ -19,7 +17,6 @@ router.get('/', ( p_req, p_res)=>{
     counter++;
     view( p_res, 'main', 'main', 'default', {'counter': counter} );
 });
-
 
 router.get('/aboute', ( p_req, p_res)=>{
     counter++;
