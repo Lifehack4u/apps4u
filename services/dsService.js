@@ -5,7 +5,7 @@ function retrive( p_req, p_res )
 {
     if( !METHODS.includes( p_req.method ) ) return {"message":"Method not allowed"};
 
-    return {"message":"Retrive method"};
+    return {"message":"Retrive method Changed"};
 }
 
 
