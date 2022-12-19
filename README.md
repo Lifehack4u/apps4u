@@ -1,13 +1,13 @@
-## Lifehack4u
+# Lifehack4u
 
-# Install NODE JS
+### Install NODE JS
 
-# Install NPM
+### Install NPM
 
-# Run npm init ( click enter to go throw the questions )
+### Run npm init ( click enter to go throw the questions )
 
-# Run npm install
+### Run npm install
 
-# Run node index.js
+### Run node index.js
 
-# Go to localhost:3000
+### Go to localhost:3000
