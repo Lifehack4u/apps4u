@@ -11,16 +11,16 @@ router.use((req, res, next) => {
 
 router.get('/', ( p_req, p_res)=>{
    
-    p_res.json({"route": "test "});
+    view( p_res, 'store', 'store', 'default', {'counter': 0} );
 });
 
-router.get('/test1', ( p_req, p_res)=>{
+router.get('/store1', ( p_req, p_res)=>{
    
-    p_res.json({"route": "test1 "});
+    view( p_res, 'aboute', 'aboute', 'default', {'counter': 0} );
 });
 
 
 
 
 /// Using the router;
-app.use('/test', router );
+app.use('/store', router );
