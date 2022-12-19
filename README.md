@@ -4,7 +4,7 @@
 
 ### Install NPM
 
-### Run npm init ( click enter to go throw the questions )
+### Run npm init ( click enter to answer questions. )
 
 ### Run npm install
 
