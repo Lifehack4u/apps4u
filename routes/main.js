@@ -22,6 +22,9 @@ router.get('/aboute', ( p_req, p_res)=>{
     view( p_res, 'aboute', 'aboute', 'default', {'counter': counter} );
 });
 
+router.get('/newroute', ( p_req, p_res)=>{
+    view( p_res, 'aboute', 'aboute', 'default', {'counter': counter} );
+});
 
 
 
