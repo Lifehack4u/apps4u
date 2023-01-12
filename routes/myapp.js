@@ -13,7 +13,7 @@ const router = require('express').Router();
 /// This will your main route - www.example.com/myapp
 router.get('/', ( p_req, p_res)=>{
     
-    view( p_res, 'main', 'main', 'default', {});
+    view( p_res, 'myapp', 'myapp', 'default', {});
 });
 
 
@@ -22,6 +22,15 @@ router.get('/moha', ( p_req, p_res)=>{
    
     p_res.json({"route": "test1 "});
 });
+
+
+///  www.example.com/myapp/test1
+router.get('/settings', ( p_req, p_res)=>{
+   
+    view( p_res, 'myapp/settings', 'settings', 'default', {});
+});
+
+
 
 
 /// A post request - www.example.com/myapp/name

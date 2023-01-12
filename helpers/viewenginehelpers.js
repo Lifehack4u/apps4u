@@ -19,7 +19,7 @@ function getAppJs( p_app_name )
     let f = `./frontend/public/apps/${ p_app_name }/index.js`;
 
     if( fs.existsSync( f ) ){
-        r = `<script type="text/javascript" src="static/apps/${p_app_name}/index.js" ></script>`;
+        r = `<script type="text/javascript" src="/static/apps/${p_app_name}/index.js" ></script>`;
     }
     return r;
 }
