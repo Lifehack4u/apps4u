@@ -1,20 +1,21 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./frontend/source/apps/app.js":
-/*!*************************************!*\
-  !*** ./frontend/source/apps/app.js ***!
-  \*************************************/
+/***/ "./frontend/source/apps/restaurant/js/index.js":
+/*!*****************************************************!*\
+  !*** ./frontend/source/apps/restaurant/js/index.js ***!
+  \*****************************************************/
 /***/ (() => {
 
-console.log('app js file...');
+console.log('This is school');
+alert('RESTAURANT!');
 
 /***/ }),
 
-/***/ "./frontend/source/apps/app.scss":
-/*!***************************************!*\
-  !*** ./frontend/source/apps/app.scss ***!
-  \***************************************/
+/***/ "./frontend/source/apps/restaurant/index.scss":
+/*!****************************************************!*\
+  !*** ./frontend/source/apps/restaurant/index.scss ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -110,8 +111,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/frontend/public/js/app": 0,
-/******/ 			"frontend/public/css/app": 0
+/******/ 			"/frontend/public/apps/restaurant/index": 0,
+/******/ 			"frontend/public/apps/restaurant/index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -161,8 +162,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["frontend/public/css/app"], () => (__webpack_require__("./frontend/source/apps/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["frontend/public/css/app"], () => (__webpack_require__("./frontend/source/apps/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["frontend/public/apps/restaurant/index"], () => (__webpack_require__("./frontend/source/apps/restaurant/js/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["frontend/public/apps/restaurant/index"], () => (__webpack_require__("./frontend/source/apps/restaurant/index.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
