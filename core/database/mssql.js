@@ -3,6 +3,11 @@ class MsSql {
     {
 
     }
+
+    select()
+    {
+        
+    }
 }
 
 module.exports = MsSql;
