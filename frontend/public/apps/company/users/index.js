@@ -1,20 +1,20 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./views/apps/about/js/index.js":
-/*!**************************************!*\
-  !*** ./views/apps/about/js/index.js ***!
-  \**************************************/
+/***/ "./frontend/source/apps/company/users/js/index.js":
+/*!********************************************************!*\
+  !*** ./frontend/source/apps/company/users/js/index.js ***!
+  \********************************************************/
 /***/ (() => {
 
-console.log('about js file...');
+console.log('Users');
 
 /***/ }),
 
-/***/ "./views/apps/about/index.scss":
-/*!*************************************!*\
-  !*** ./views/apps/about/index.scss ***!
-  \*************************************/
+/***/ "./frontend/source/apps/company/users/index.scss":
+/*!*******************************************************!*\
+  !*** ./frontend/source/apps/company/users/index.scss ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -110,8 +110,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/public/apps/about/index": 0,
-/******/ 			"public/apps/about/index": 0
+/******/ 			"/frontend/public/apps/company/users/index": 0,
+/******/ 			"frontend/public/apps/company/users/index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -161,8 +161,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["public/apps/about/index"], () => (__webpack_require__("./views/apps/about/js/index.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/apps/about/index"], () => (__webpack_require__("./views/apps/about/index.scss")))
+/******/ 	__webpack_require__.O(undefined, ["frontend/public/apps/company/users/index"], () => (__webpack_require__("./frontend/source/apps/company/users/js/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["frontend/public/apps/company/users/index"], () => (__webpack_require__("./frontend/source/apps/company/users/index.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

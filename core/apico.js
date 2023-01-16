@@ -14,6 +14,8 @@ let _allRoutes = {
   "all":[]
 };
 
+
+
 app.use(function(req, res, next) {
   //res.setHeader('Content-Security-Policy', "default-src 'none'; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline';img-src 'self' blob: data:; font-src 'self' https: data:;media-src 'self' blob:;connect-src http://localhost:3000 ; ");
   next();
