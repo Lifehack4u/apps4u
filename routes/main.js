@@ -19,8 +19,6 @@ router.get('/', ( p_req, p_res)=>{
 });
 
 router.get('/aboute', ( p_req, p_res)=>{
-    counter++;
-    setCounterToZero();
     view( p_res, 'aboute', 'aboute', 'default', {'counter': counter} );
 });
 
