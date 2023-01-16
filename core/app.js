@@ -12,6 +12,7 @@ Object.entries( config.statics ).forEach(([ k, v ])=>{
   app.use(`/${ k }`, express.static(`frontend/${ v }`));
 });
 
+app.use( express.json() );
 
 // Set the template engine
 app.use(expressLayouts);
