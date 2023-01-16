@@ -13,7 +13,7 @@ router.use((req, res, next) => {
     next()
 })
 
-router.get('/', ( p_req, p_res)=>{
+router.get('/aboute', ( p_req, p_res)=>{
     counter++;
     view( p_res, 'main', 'main', 'default', {'counter': counter} );
 });
