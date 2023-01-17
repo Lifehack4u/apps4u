@@ -35,3 +35,31 @@ router.post('/name', ( p_req, p_res)=>{
 
 /// The name of your main route;
 app.use('/test', router );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let user = {
+    "name":"MAr",
+    "age": 33,
+    "hoob": "books"
+}
+
+
+
+
+
+

@@ -1,20 +1,21 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./frontend/source/apps/myapp/js/index.js":
-/*!************************************************!*\
-  !*** ./frontend/source/apps/myapp/js/index.js ***!
-  \************************************************/
+/***/ "./frontend/source/apps/company/js/index.js":
+/*!**************************************************!*\
+  !*** ./frontend/source/apps/company/js/index.js ***!
+  \**************************************************/
 /***/ (() => {
 
-console.log('may app');
+console.log('This is school');
+alert('SCHOOL!');
 
 /***/ }),
 
-/***/ "./frontend/source/apps/myapp/index.scss":
-/*!***********************************************!*\
-  !*** ./frontend/source/apps/myapp/index.scss ***!
-  \***********************************************/
+/***/ "./frontend/source/apps/company/index.scss":
+/*!*************************************************!*\
+  !*** ./frontend/source/apps/company/index.scss ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -110,8 +111,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/frontend/public/apps/myapp/index": 0,
-/******/ 			"frontend/public/apps/myapp/index": 0
+/******/ 			"/frontend/public/apps/company/index": 0,
+/******/ 			"frontend/public/apps/company/index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -161,8 +162,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["frontend/public/apps/myapp/index"], () => (__webpack_require__("./frontend/source/apps/myapp/js/index.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["frontend/public/apps/myapp/index"], () => (__webpack_require__("./frontend/source/apps/myapp/index.scss")))
+/******/ 	__webpack_require__.O(undefined, ["frontend/public/apps/company/index"], () => (__webpack_require__("./frontend/source/apps/company/js/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["frontend/public/apps/company/index"], () => (__webpack_require__("./frontend/source/apps/company/index.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -1,20 +1,20 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./frontend/source/apps/myapp/settings/js/index.js":
-/*!*********************************************************!*\
-  !*** ./frontend/source/apps/myapp/settings/js/index.js ***!
-  \*********************************************************/
+/***/ "./frontend/source/apps/company/users/js/index.js":
+/*!********************************************************!*\
+  !*** ./frontend/source/apps/company/users/js/index.js ***!
+  \********************************************************/
 /***/ (() => {
 
-console.log('may app');
+console.log('Users');
 
 /***/ }),
 
-/***/ "./frontend/source/apps/myapp/settings/index.scss":
-/*!********************************************************!*\
-  !*** ./frontend/source/apps/myapp/settings/index.scss ***!
-  \********************************************************/
+/***/ "./frontend/source/apps/company/users/index.scss":
+/*!*******************************************************!*\
+  !*** ./frontend/source/apps/company/users/index.scss ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -110,8 +110,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/frontend/public/apps/myapp/settings/index": 0,
-/******/ 			"frontend/public/apps/myapp/settings/index": 0
+/******/ 			"/frontend/public/apps/company/users/index": 0,
+/******/ 			"frontend/public/apps/company/users/index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -161,8 +161,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["frontend/public/apps/myapp/settings/index"], () => (__webpack_require__("./frontend/source/apps/myapp/settings/js/index.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["frontend/public/apps/myapp/settings/index"], () => (__webpack_require__("./frontend/source/apps/myapp/settings/index.scss")))
+/******/ 	__webpack_require__.O(undefined, ["frontend/public/apps/company/users/index"], () => (__webpack_require__("./frontend/source/apps/company/users/js/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["frontend/public/apps/company/users/index"], () => (__webpack_require__("./frontend/source/apps/company/users/index.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
