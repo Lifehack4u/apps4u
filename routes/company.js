@@ -20,10 +20,21 @@ router.get('/users', ( p_req, p_res)=>{
     view( p_res, 'company/users', 'Users', 'default');
 });
 
+router.get('/json', ( p_req, p_res)=>{
+   
+    p_res.json({"the json": "get" });
+});
 
-router.get('/user/:username', ( p_req, p_res)=>{
+router.post('/post-json', ( p_req, p_res)=>{
+   
+    p_res.json({"the json": "post" });
+});
 
-    view( p_res, 'company/user', 'User', 'default', {"username": p_req.params.username });
+
+router.get('/user/:username/:lastname', ( p_req, p_res)=>{
+
+    view( p_res, 'company/user', 'User', 'default', 
+    {"username": p_req.params.username, "lastname": p_req.params.lastname });
 
 });
 
@@ -32,6 +43,11 @@ router.get('/settings', ( p_req, p_res)=>{
     view( p_res, 'company/settings', 'settings', 'default');
 });
 
+router.get('/getcompany/:userid', ( p_req, p_res)=>{
+    p_res.json({"userid": p_req.params.userid });
+});
+
+
 
 router.post('/setcompany/:userid', ( p_req, p_res)=>{
 
@@ -39,9 +55,7 @@ router.post('/setcompany/:userid', ( p_req, p_res)=>{
     p_res.json({"userid": p_req.params.userid, "body": p_req.body });
 });
 
-router.get('/getcompany/:userid', ( p_req, p_res)=>{
-    p_res.json({"userid": p_req.params.userid });
-});
+
 
 
 
