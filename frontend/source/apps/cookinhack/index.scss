@@ -1,0 +1,131 @@
+
+.wall {
+    background-image: url(Image/10_Wall.jpg);
+    position: absolute;
+    width: 1178px;
+    height: 1641px;
+    margin-left: 131px;
+}
+
+.logo {
+    position: absolute;
+    width: 92px;
+    height: 84px;
+    margin-left: 19px;
+    margin-top: 30px;
+}
+/* Lazat */
+h1 {
+    position: absolute;
+    width: 309px;
+    height: 109px;
+    margin-left: 259px;
+    margin-top: 14px;
+    font-family: 'Italiana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 118px;
+    text-align: center;
+    color: #000000;
+}
+ /* Mee */
+h2 {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 43px;
+    width: 289px;
+    height: 121px;
+    font-family: 'Italianno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 160px;
+    text-align: center;
+    color: #000000;
+}
+/* .com */
+h3 {
+    position: absolute;
+    width: 177px;
+    height: 63px;
+    margin-left: 495px;
+    margin-top: 56px;
+    font-family: 'Italianno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center;
+    color: #000000;
+}
+/* banner */
+.cropped {
+    position: absolute;
+    width: 1440px;
+    height: 212px;
+    margin-left: 0px;
+    margin-top: 126px;
+    object-fit: cover;
+}
+
+.title {
+    position: absolute;
+    width: 722px;
+    height: 212px;
+    margin-left: 359px;
+    margin-top: 172px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+
+h4 {
+    position: absolute;
+    width: 543px;
+    height: 199px;
+    margin-left: 89px;
+    margin-top: 7px;
+    font-family: 'Italiana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 151px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+/* content */
+p {
+    font-family: 'Italiana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+
+    text-align: center;
+
+    color: #000000;
+}
+/* box */
+.title-2 {
+    position: absolute;
+    width: 340px;
+    height: 66px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.content {
+    position: absolute;
+    width: 768px;
+    height: 308px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+}
+
+.Img-rnd {
+    position: absolute;
+    border-radius: 50%;
+}
