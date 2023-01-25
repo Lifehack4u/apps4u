@@ -1,1 +1,152 @@
-body,html{height:100vh}.a-container{display:flex;flex-direction:column;height:100%;width:100%}.a-container .a-container__header{height:60px}.a-container .a-container__body{flex-grow:1;overflow-x:hidden;overflow-y:auto}.a-container .a-container__footer{height:60px}.full-h{height:100%}
+html,
+body {
+  height: 100vh;
+}
+
+/* styles for flex view */
+.a-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.a-container .a-container__header {
+  height: 60px;
+}
+.a-container .a-container__body {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.a-container .a-container__footer {
+  height: 60px;
+}
+
+.full-h {
+  height: 100%;
+}
+
+#logo-min {
+  height: 60px;
+  width: 45px;
+}
+
+.modal-bgd {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.77);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0, 3s ease-in-out;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-form-container {
+  background: #fff;
+  padding: 32px 92px 60px 92px;
+  position: relative;
+}
+
+.modal-form-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000;
+  margin: 32px 0 12px 0;
+}
+
+.modal-form-descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.modal-form-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.modal-field-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.modal-field-input {
+  border: 1px solid #005BBB;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 48px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  padding: 4px 8px;
+  font-family: "Montserrat";
+  font-style: normal;
+}
+
+.modal-form-btn {
+  background: rgba(255, 107, 10, 0.74);
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFBFB;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 21px;
+  top: 10px;
+  font-size: 34px;
+  color: #434A56;
+  cursor: pointer;
+  border: 0;
+  background: none;
+}
+
+.modal-descr {
+  margin-bottom: 0;
+}
+
+.modal-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.gus-anim {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin-bottom: auto;
+  margin-top: auto;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.register-link-modal {
+  margin-top: 20px;
+  margin-bottom: 1rem;
+}

@@ -1,2 +1,9 @@
-console.log('Just do it');
-alert(' Here you can wtite js code')
+
+var modal = $modal({
+    title: 'Текст заголовка'
+});
+
+document.querySelector('#logging').addEventListener('click', function (e) {
+
+    modal.show()
+})

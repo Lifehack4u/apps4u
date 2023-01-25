@@ -18,7 +18,7 @@ router.get('/', (p_req, p_res) => {
 
 router.get('/registration', (p_req, p_res) => {
 
-    view(p_res, 'volunteer/registration', 'VProject', 'default');
+    view(p_res, 'volunteer/registration', 'VProject', 'olga');
 });
 
 ///  www.example.com/test/test1

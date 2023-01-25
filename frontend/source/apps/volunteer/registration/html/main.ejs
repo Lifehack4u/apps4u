@@ -48,6 +48,26 @@
             <button type="submit" class="btn btn-primary" id="submit-btn">Sign in</button>
         </form>
     </div>
+    <div class="modal-bgd" id="form-modal">
+        <div class="modal-form-container">
+            <button class="close-btn">x</button>
+            <form action="#" class="modal-form" id="form">
+                <h4 class="modal-form-title">Logg in or register</h4>
+                <p class="modal-form-descr">Welcome to volunteer for life</p>
+                <div class="modal-form-field">
+                    <label for="user-email" class="modal-field-name">E - mail</label>
+                    <input type="email" class="modal-field-input" id="user-email" name="Email">
+                </div>
+                <div class="modal-form-field">
+                    <label for="user-password" class="modal-field-name">Password</label>
+                    <input type="password" class="modal-field-input" id="user-password" name="Password">
+                </div>
+                <button class="modal-form-btn" id="launch-btn">Logg in</button>
+                <p class="register-link-modal"> If you don't have an account, please</p>
+                <a class="register-link" href="/volunteer/registration">register</a>
+            </form>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>

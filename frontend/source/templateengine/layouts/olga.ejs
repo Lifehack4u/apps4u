@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+    <link rel="shortcut icon" type="image/jpg" href="/static/images/fv.png" />
+
+    <link rel="stylesheet" href="/static/vendor/bs/bs.css">
+
+    <link rel="stylesheet" href="/static/css/app.css">
+    <link rel="stylesheet" href="/static/apps/<%- app_name %>/index.css">
+    <link rel="stylesheet" href="/static/vendor/dx/css/dx.light.css">
+    <link rel="manifest" href="/manifests/mohatestcopy.json">
+
+
+
+    <script type="text/javascript" src="/static/libs/container/index.js"></script>
+    <title><%- title %></title>
+</head>
+
+<body class="d-none a-container">
+    <header class="a-container__header">
+
+        <%- include('../inc/header'); %>
+
+    </header>
+    <main class="a-container__body">
+
+        <%- body %>
+
+    </main>
+
+    <footer class="a-container__footer">
+        <%- include('../inc/footer.ejs') %>
+
+    </footer>
+
+
+
+    <script type="text/javascript" src="/static/vendor/socket/socket.io.js"></script>
+    <script type="text/javascript" src="/static/vendor/jq.js"></script>
+    <script type="text/javascript" src="/static/vendor/dx/js/dx.all.js"></script>
+    <script type="text/javascript" src="/static/vendor/bs/bs.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+
+    <%- helper.initAppDs( app_name ) %>
+        <script type="text/javascript" src="/static/js/app.js"></script>
+        <%- helper.getAppJs( app_name ) %>
+
+</body>
+
+</html>
