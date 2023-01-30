@@ -18,7 +18,12 @@ router.get('/', ( p_req, p_res)=>{
 
 
 ///  www.example.com/test/test1
-router.get('/test1', ( p_req, p_res)=>{
+router.get('/registration', ( p_req, p_res)=>{
+   
+    p_res.json({"route": "test1 "});
+});
+
+router.get('/iput', ( p_req, p_res)=>{
    
     p_res.json({"route": "test1 "});
 });
@@ -34,22 +39,5 @@ router.post('/name', ( p_req, p_res)=>{
 
 
 /// The name of your main route;
-app.use('/test', router );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.use('/wh', router );
 

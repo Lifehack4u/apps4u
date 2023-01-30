@@ -1,1 +1,26 @@
-body,html{height:100vh}.a-container{display:flex;flex-direction:column;height:100%;width:100%}.a-container .a-container__header{height:60px}.a-container .a-container__body{flex-grow:1;overflow-x:hidden;overflow-y:auto}.a-container .a-container__footer{height:60px}.full-h{height:100%}
+html, body {
+  height: 100vh;
+}
+
+/* styles for flex view */
+.a-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.a-container .a-container__header {
+  height: 60px;
+}
+.a-container .a-container__body {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.a-container .a-container__footer {
+  height: 60px;
+}
+
+.full-h {
+  height: 100%;
+}

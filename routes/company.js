@@ -3,6 +3,8 @@ const { view } = require('../core/view');
 
 const router = require('express').Router();
 
+const { addUser, _users } = require('../services/companyHelper');
+
 
 /// Use a middleware
 // router.use((req, res, next) => {
@@ -33,9 +35,14 @@ router.post('/post-json', ( p_req, p_res)=>{
 
 router.get('/user/:username/:lastname', ( p_req, p_res)=>{
 
+    addUser( p_req.params.username, p_req.params.lastname );
     view( p_res, 'company/user', 'User', 'default', 
     {"username": p_req.params.username, "lastname": p_req.params.lastname });
 
+});
+
+router.get('/allusers', function( p_req, p_res ){
+    p_res.json({"allusers": _users() });
 });
 
 router.get('/settings', ( p_req, p_res)=>{
