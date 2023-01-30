@@ -1,5 +1,5 @@
 //console.log('This is school');
-alert('RESTAURANT!');
+alert('BOOKMEAPP!');
 
 function openForm() {
     //document.getElementById("popupForm").style.display = "block";
