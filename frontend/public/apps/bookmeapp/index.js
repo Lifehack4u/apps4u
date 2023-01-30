@@ -8,7 +8,8 @@
 /***/ (() => {
 
 //console.log('This is school');
-//alert('RESTAURANT!');
+alert('RESTAURANT!');
+
 function openForm() {
   //document.getElementById("popupForm").style.display = "block";
   $("#popupForm").css("display", "block");
