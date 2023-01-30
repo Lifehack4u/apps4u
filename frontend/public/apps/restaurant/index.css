@@ -1,1 +1,123 @@
+.row {
+  /*border: 1px #000 dashed;*/
+  margin: 3px;
+}
 
+.col {
+  border: 1px red solid;
+  margin: 5px;
+}
+
+#forbusiness {
+  text-align: right;
+  text-decoration: underline;
+}
+
+#toprow {
+  height: 50px;
+}
+
+.tabh, .checkbox {
+  text-align: center;
+}
+
+#secondrow {
+  height: 300px;
+}
+
+#thirdrow {
+  min-height: 600px;
+}
+
+#image {
+  height: 300px;
+}
+
+#background {
+  height: 500px;
+}
+
+#regform {
+  padding-right: 400px;
+}
+
+#image2 {
+  opacity: 0.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.openBtn {
+  display: flex;
+  justify-content: left;
+}
+
+.openButton {
+  border: none;
+  border-radius: 5px;
+  /*background-color: #1c87c9;*/
+  color: black;
+  /*padding: 14px 20px;*/
+  cursor: pointer;
+  position: fixed;
+}
+
+.loginPopup {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  /*border: 1px blue dashed*/
+}
+
+.formPopup {
+  display: block;
+  position: fixed;
+  left: 45%;
+  top: 5%;
+  /*transform: translate(-50%, 5%);*/
+  border: 3px solid #999999;
+  /*z-index: 9;*/
+}
+
+.formContainer {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.formContainer input[type=text],
+.formContainer input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  border: none;
+  background: #eee;
+}
+
+.formContainer input[type=text]:focus,
+.formContainer input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.formContainer .btn {
+  padding: 12px 20px;
+  border: none;
+  background-color: #8ebf42;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.formContainer .cancel {
+  background-color: #cc0000;
+}
+
+.formContainer .btn:hover,
+.openButton:hover {
+  opacity: 1;
+}
