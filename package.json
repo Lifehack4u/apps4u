@@ -19,7 +19,8 @@
     "mssql": "^8.1.0",
     "mysql2": "^2.3.3",
     "socket.io": "^4.5.0",
-    "sqlite3": "^5.0.8"
+    "sqlite3": "^5.0.8",
+    "tedious": "^15.1.2"
   },
   "devDependencies": {
     "laravel-mix": "^6.0.25",
