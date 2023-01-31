@@ -5,15 +5,16 @@ class MySql {
     constructor( p_config )
     {
         this.#_connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            database: 'test'
+            host: p_config.host,
+            user: p_config.user,
+            password: p_config.password,
+            database: p_config.db_name
           });
     }
 
     table( table_name )
     {
-        return new Table( table_name, this );
+        return new Table( table_name, this.#_connection );
     }
 }
 
@@ -24,17 +25,17 @@ class Table {
     #_columns = '*';
     #_sql = null ;
     #_where = null;
-    #_whereParams = null;
+    #_whereParams = [];
     #_groupBy = null;
     #_orderBy = null;
     #_limit = null;
     #_offset = null;
-    #tableNAme = null;
+    #tableName = null;
     #driver = null;
-    constructor( table_name, p_db )
+    constructor( table_name, p_connection )
     {
         this.#tableName = table_name,
-        this.#driver = p_db;
+        this.#driver = p_connection;
 
     }
 
@@ -72,18 +73,21 @@ class Table {
 
     retriev()
     {
-        let sql = ` SELECT ${this.#_columns} FROM ${this.#tableNAme} `;
-        let params = {};
+        let sql = ` SELECT ${this.#_columns} FROM ${this.#tableName} `;
+        let params = [];
         if( this.#_where ) {
             sql += ` WHERE ${ this.#_where } `
         }
 
+        if( this.#_groupBy ) {
+            sql += ` GROUP BY ${ this.#_groupBy } `
+        }
+
+        if( this.#_orderBy ) {
+            sql += ` ORDER BY ${ this.#_orderBy } `;
+        }
+
         if( this.#_limit ) {
-
-            if( this.#_orderBy ) {
-                sql += ` ORDER BY ${ this.#_orderBy } `;
-            }
-
             sql += ` LIMIT ${ this.#_limit } `;
 
             if( this.#_offset ) {
@@ -92,14 +96,12 @@ class Table {
 
         }
 
-        if( this.#_groupBy ) {
-            sql += ` GROUP BY ${ this.#_groupBy } `
-        }
+        
 
         sql += ' ; ';
 
         return new Promise(( resolve, reject )=>{
-            this.#driver.execute( sql, params, ( err, res, fields )=>{
+            this.#driver.execute( sql, this.#_whereParams, ( err, res, fields )=>{
                 if( err ) reject( err );
 
                 resolve({ "result": res, "fields": fields });

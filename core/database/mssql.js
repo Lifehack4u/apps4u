@@ -1,4 +1,4 @@
-class MsSql {
+class Mssql {
     constructor( p_config )
     {
 
@@ -10,4 +10,4 @@ class MsSql {
     }
 }
 
-module.exports = MsSql;
+module.exports = Mssql;
