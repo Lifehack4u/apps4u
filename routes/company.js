@@ -5,6 +5,10 @@ const router = require('express').Router();
 
 const { addUser, _users } = require('../services/companyHelper');
 
+let Database = require('../core/database/database');
+
+
+
 
 /// Use a middleware
 // router.use((req, res, next) => {
@@ -22,8 +26,10 @@ router.get('/users', ( p_req, p_res)=>{
     view( p_res, 'company/users', 'Users', 'default');
 });
 
-router.get('/json', ( p_req, p_res)=>{
-   
+router.get('/db', ( p_req, p_res)=>{
+   let db = new Database({ driver: 'mysql', host:'localhost', user: 'test@test.tset', password:'testpass123456', database:'testDB' });
+   let res = db.table('Companies').retriev();
+   console.log('res : ', res );
     p_res.json({"the json": "get" });
 });
 

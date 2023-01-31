@@ -5,15 +5,16 @@ class MySql {
     constructor( p_config )
     {
         this.#_connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            database: 'test'
+            host: p_config.host,
+            user: p_config.user,
+            password: p_config.password,
+            database: p_config.database
           });
     }
 
     table( table_name )
     {
-        return new Table( table_name, this );
+        return new Table( table_name, this.#_connection );
     }
 }
 
@@ -29,7 +30,7 @@ class Table {
     #_orderBy = null;
     #_limit = null;
     #_offset = null;
-    #tableNAme = null;
+    #tableName = null;
     #driver = null;
     constructor( table_name, p_db )
     {
@@ -72,7 +73,7 @@ class Table {
 
     retriev()
     {
-        let sql = ` SELECT ${this.#_columns} FROM ${this.#tableNAme} `;
+        let sql = ` SELECT ${this.#_columns} FROM ${this.#tableName} `;
         let params = {};
         if( this.#_where ) {
             sql += ` WHERE ${ this.#_where } `
