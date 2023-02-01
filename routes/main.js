@@ -1,7 +1,19 @@
 const app = require('../core/app');
 const { view } = require('../core/view');
 
-const Database = require('../core/database/database');
+const sql = require('mssql/msnodesqlv8')
+
+var config = {
+    server: "LAPTOP-6906J09J\\SQLEXPRESS",
+    user: "test@test.test",
+    password: "testpass123456",
+    database: 'testDB',
+    driver: 'msnodesqlv8',
+    options:{
+        trustedConnection: true
+    }
+  };
+
 
 const router = require('express').Router();
 
@@ -25,16 +37,21 @@ router.get('/aboute', ( p_req, p_res)=>{
 });
 
 router.get('/cities', ( p_req, p_res)=>{
+   
+    sql.connect(config)
+    .then( pool =>{
 
-    let mysql = new Database({ driver: 'mysql', host:'localhost', db_name:'world', user: 'testuser', password: 'testpass1234' });
-
-    mysql.table('city').columns(' ID , Name ').where(' ID = ?',[1]).retriev().then(( res )=>{
-        p_res.json({"result": res.result  });
+        return pool.request().query( `select * from companies` )
+    } )
+    .then( res =>{
+        console.log(' sql res :  ', res.recordset );
+        p_res.json({ "result": res.recordset  });
     })
-    .catch(( err )=>{
-        console.error(' err : ', err );
-        p_res.json({"route": "err "});
-    });
+    .catch( err=>{
+        console.log(' err  : ', err );
+        p_res.json({ "err": err  });
+    } )
+
     
 });
 
