@@ -8,8 +8,7 @@
 /***/ (() => {
 
 //console.log('This is school');
-alert('BOOKMEAPP!');
-
+//alert('BOOKMEAPP!');
 function openForm() {
   //document.getElementById("popupForm").style.display = "block";
   $("#popupForm").css("display", "block");
@@ -29,6 +28,40 @@ function closeForm() {
 
 $('.close-forme').on('click', function () {
   $("#popupForm").css("display", "none");
+});
+$('#login').on('click', function () {
+  fetch('/bookmeapp/login', {
+    method: 'post',
+    headers: {
+      'Content-Type': "application/json"
+    },
+    body: JSON.stringify({
+      "name": $('#email').val(),
+      "password": $('#psw').val()
+    })
+  })
+  /*    
+      .then( response => {
+          return response.json()
+      })
+      
+      .then( res => {
+          console.log('res: ', res);
+      })
+  
+      .catch( err => {
+          console.error('err: ,', err);
+      })
+   */
+  .then(function (response) {
+    /////////////////////////////////////////////////////////////////////        
+    console.log('server responded');
+    if (response.status == 200) return response.text();else /////////////////////////////////////////////////////////////////////        
+      return response.json();
+  }).then(function (data) {
+    document.body.innerHTML = data;
+    console.log('data:', data);
+  });
 });
 
 /***/ }),
