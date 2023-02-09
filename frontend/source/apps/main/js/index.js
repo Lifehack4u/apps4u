@@ -1,30 +1,27 @@
-import {LitElement, html} from 'lit';
 
 
-class MyElement extends LitElement {
-    static properties = {
-        timer: 0
+fetch('/login', { 
+    'method':'post',
+    headers: {
+        'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }, 
+    body: JSON.stringify({
+        "user": $('#user').val(), 
+        'key': $('#key').val() 
+    }) 
+}) 
+.then( response => {
+    return response.json()
+} )
+.then( res => {
+    console.log(' res : ', res );
+    if(  res.code === 0 ) {
+        // Show error message
+        alert('Error');
     }
-
-
-    constructor() {
-        super();
-        
-    }
-    render()
-    {
-        return html`<p> Hi me </p>
-        <p> Timer:${this.timer} </p>` ;
-        
-    }
-
-    runTimer()
-    {
-        setInterval(()=>{
-            this.timer =( typeof this.timer  === "string" ) ? parseInt( this.timer ) + 1 : this.timer + 1;
-        }, 1000);
-    }
-
-
-}
-customElements.define('my-element', MyElement);
+    
+} )
+.catch( err=>{
+    console.error(' err: ', err );
+} )
