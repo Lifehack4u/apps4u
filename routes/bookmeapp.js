@@ -46,6 +46,13 @@ router.get('/registration', ( p_req, p_res)=>{
     
  });
 
+ router.get('/schedule', ( p_req, p_res)=>{
+   //p_res.json({"route": "bookmeapp"});
+   //console.log("Hello");
+   view( p_res, 'bookmeapp/schedule', 'schedule', 'default', {});
+   
+});
+
  router.post('/login', ( p_req, p_res)=>{
    //p_res.json({"route": "bookmeapp"});
    //console.log("Hello");
