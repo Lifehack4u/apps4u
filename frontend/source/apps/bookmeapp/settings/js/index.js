@@ -1,1 +1,2 @@
-alert('mysettings');
+console.log('This is settings');
+alert('settings!');
