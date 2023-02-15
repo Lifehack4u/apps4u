@@ -4,8 +4,8 @@ const { view } = require('../core/view');
 const sql = require('mssql/msnodesqlv8')
 
 var config = {
-    server: "ELEV-1FT52E\\",//\\MSSQLSERVER",
-    user: "newtest@test.test",
+    server: "",
+    user: "",
     password: "",
     database: 'bookmeappDB',
     driver: 'msnodesqlv8',
